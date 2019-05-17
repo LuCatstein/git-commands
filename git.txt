@@ -1,6 +1,6 @@
 Comandos git:
 
-// inicializa um repositório git na pasta atual do terminal
+// inicializa um repositï¿½rio git na pasta atual do terminal
 git init
 
 // mostra os logs de commit de forma resumida
@@ -18,15 +18,24 @@ git add
 // commita arquivos adicionados com uma mensagem
 git commit -m ''
 
-// envia arquivos commitados para meu repositório
+// envia arquivos commitados para meu repositï¿½rio
 git push
 
-// baixa a versão mais recente do meu repositório
+// baixa a versï¿½o mais recente do meu repositï¿½rio
 git pull 
 
-
+// lista as branches presentes no repositÃ³rio (caso tenha um nome em seguida, cria uma branch nova)
 git branch
+
+// entra em uma branch existente
 git checkout
 
-git merge
-git rebase
+// cria e entra em uma branch nova automaticamente
+git checkout -b
+
+// joga as atualizaÃ§Ãµes de uma branch selecionada na branch atual
+git merge nomeDaBranch
+
+// unifica os commits da branch1 na branch2, evitando erros para dar push no repositÃ³rio remoto
+git rebase nomeDaBranch1 nomeDaBranch2
+
