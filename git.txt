@@ -1,0 +1,32 @@
+Comandos git:
+
+// inicializa um repositório git na pasta atual do terminal
+git init
+
+// mostra os logs de commit de forma resumida
+git log
+
+// mostra logs de commits com o nome do arquivo alterado
+git whatchanged
+
+// mostra logs de commits de forma detalhada, mostrando o que foi alterado no arquivo em cada commit
+git whatchanged -p
+
+// seleciona arquivos para commitar
+git add
+
+// commita arquivos adicionados com uma mensagem
+git commit -m ''
+
+// envia arquivos commitados para meu repositório
+git push
+
+// baixa a versão mais recente do meu repositório
+git pull 
+
+
+git branch
+git checkout
+
+git merge
+git rebase
