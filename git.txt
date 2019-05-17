@@ -1,5 +1,7 @@
 Comandos git:
 
+syntaxe de ajuda do commit: git --help nomeDoComandoDesejado
+
 // inicializa um reposit�rio git na pasta atual do terminal
 git init
 
@@ -28,7 +30,10 @@ git pull
 git branch
 
 // entra em uma branch existente
-git checkout
+git checkout nomeDaBranch
+
+// Este comando vai restaurar o arquivo index.html ao seu estado original CASO ele não esteja no index ou staging area.
+git checkout -- nodeDoArquivo.arq
 
 // cria e entra em uma branch nova automaticamente
 git checkout -b
@@ -39,3 +44,38 @@ git merge nomeDaBranch
 // unifica os commits da branch1 na branch2, evitando erros para dar push no repositório remoto
 git rebase nomeDaBranch1 nomeDaBranch2
 
+// reseta o estado de "add" de determinado arquivo
+git reset HEAD nomeDoArquivo
+
+// caso o arquivo ja tenha sido commitado, ele também pode voltar para o commit escolhido pegando o código presente no git log
+git reset codigoDoCommitDesejado
+
+// utilizado para deletar um commit especifico (mesmo que ele seja antigo)
+git revert codigoDoCommitDesejado
+
+// inicia o estado de stash, congelando alterações na memória do computador e poder ser acessada depois para enfim poder ser commitada
+git stash
+
+// lista todos stashs atuais na memória
+git stash list
+
+
+// retorna o stash mais recente da memória
+git stash pop
+
+// pode ser usado para retomar um stash especifico que está na memória (o nome do stash é adquirido através do list)
+gis stash apply nomeDoStash
+
+
+// apaga da memória o stash 
+git stash drop
+
+// git bisect é uma ferramenta de localização de commits que funciona de forma dinâmica. com o start ele é iniciado.
+git bisect start
+
+// após iniciado deve ser dito 2 parâmetros, selecionando 1 commit que voce tenha certeza que é ruim e qual commit é bom, com isso a ferramenta já pode ter ideia de onde pode ser localizado o commit em bom estado mais recente na aplicação
+git bisect bad HEAD
+git bisect good codigoDoCommitDesejado
+// a partir disso você poderá dizer a ferramenta qual commit está bom e ruim até chegar a conclusão final dizendo bisect bad ou good
+
+//
