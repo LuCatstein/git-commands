@@ -1,4 +1,4 @@
-Comandos git:
+﻿Comandos git:
 
 syntaxe de ajuda do commit: git --help nomeDoComandoDesejado
 
@@ -78,4 +78,12 @@ git bisect bad HEAD
 git bisect good codigoDoCommitDesejado
 // a partir disso você poderá dizer a ferramenta qual commit está bom e ruim até chegar a conclusão final dizendo bisect bad ou good
 
-//
+// o arquivo .gitconfig presente na raiz do usuário é onde pode ser alterado detalhes importantes, de cores a alias (atalhos) para otimizar o desenvolvimento
+[alias]
+	checkout = co
+
+// utilizado para transferir apenas um commit especifico na branch master (diferente do rebase ou merge)
+git cherry-pick
+
+// git cola é uma forma de obter interface gráfica no git, facilitando alguns detalhes, segue link de download
+http://git-cola.github.io/downloads.html
