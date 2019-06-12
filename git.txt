@@ -87,3 +87,6 @@ git cherry-pick
 
 // git cola é uma forma de obter interface gráfica no git, facilitando alguns detalhes, segue link de download
 http://git-cola.github.io/downloads.html
+
+// em caso de uso de .gitignore, caso preciso atualizar os conteudos atualizado em seu repositório, será necessario limpar o cache com o seguinte código
+git rm -r --cached .
